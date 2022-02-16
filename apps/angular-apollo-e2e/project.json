@@ -1,0 +1,28 @@
+{
+  "root": "apps/angular-apollo-e2e",
+  "sourceRoot": "apps/angular-apollo-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/angular-apollo-e2e/cypress.json",
+        "devServerTarget": "angular-apollo:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "angular-apollo:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/angular-apollo-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["angular-apollo"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "angular-apollo": "apps/angular-apollo",
+    "angular-apollo-e2e": "apps/angular-apollo-e2e"
+  }
+}
